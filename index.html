@@ -465,7 +465,15 @@
          <h3 class="text-sm font-bold text-blue-400 mb-3 flex items-center gap-2"><i data-lucide="layers" class="w-4 h-4"></i> Live Inventory Balance</h3>
          <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-800/20 max-h-48 overflow-y-auto">
           <table class="w-full text-sm border-collapse relative">
-           <thead class="sticky top-0 z-10"><tr class="border-b border-slate-800 bg-slate-900/90 text-left backdrop-blur-sm"><th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase">Item Name</th><th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase text-center">Total In</th><th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase text-center">Total Out</th><th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase text-center">In Stock</th></tr></thead>
+           <thead class="sticky top-0 z-10">
+             <tr class="border-b border-slate-800 bg-slate-900/90 text-left backdrop-blur-sm">
+               <th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase">Item Name</th>
+               <th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase text-center">Total In</th>
+               <th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase text-center">Total Out</th>
+               <th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase text-center">Avg Cost/Unit</th>
+               <th class="px-4 py-3 text-slate-400 font-bold text-xs uppercase text-center">In Stock</th>
+             </tr>
+           </thead>
            <tbody id="stock-balance-table-body" class="divide-y divide-slate-800/80"></tbody>
           </table>
          </div>
@@ -484,7 +492,16 @@
          <h3 class="text-sm font-bold text-emerald-400 mb-3">🟢 Stock IN</h3>
          <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-800/20">
           <table class="w-full text-sm border-collapse">
-           <thead><tr class="border-b border-slate-800 bg-slate-900/40 text-left"><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Date</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Item</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-center">Qty</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Cost</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-center">Action</th></tr></thead>
+           <thead>
+             <tr class="border-b border-slate-800 bg-slate-900/40 text-left">
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Date</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Item</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-center">Qty</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Cost / Unit</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Total Cost</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-center">Action</th>
+             </tr>
+           </thead>
            <tbody id="stock-in-table-body" class="divide-y divide-slate-800/80"></tbody>
           </table>
          </div>
@@ -495,7 +512,16 @@
          <h3 class="text-sm font-bold text-rose-400 mb-3">🔴 Stock OUT</h3>
          <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-800/20">
           <table class="w-full text-sm border-collapse">
-           <thead><tr class="border-b border-slate-800 bg-slate-900/40 text-left"><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Date</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Item</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-center">Qty</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Cost</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-center">Action</th></tr></thead>
+           <thead>
+             <tr class="border-b border-slate-800 bg-slate-900/40 text-left">
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Date</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Item</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-center">Qty</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Cost / Unit</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Total Cost</th>
+               <th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-center">Action</th>
+             </tr>
+           </thead>
            <tbody id="stock-out-table-body" class="divide-y divide-slate-800/80"></tbody>
           </table>
          </div>
@@ -528,7 +554,7 @@
           <div class="overflow-x-auto rounded-xl border border-slate-800 bg-slate-800/20">
             <table class="w-full text-sm border-collapse">
               <thead>
-               <tr class="border-b border-slate-800 bg-slate-900/40 text-left"><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Technician</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Total Case</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Need Payment</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Done Payment</th></tr>
+               <tr class="border-b border-slate-800 bg-slate-900/40 text-left"><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase">Technician</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Total Comm</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Paid</th><th class="px-4 py-3.5 text-slate-400 font-bold text-xs uppercase text-right">Owed Balance</th></tr>
               </thead>
               <tbody id="commission-table-body" class="divide-y divide-slate-800/80"></tbody>
             </table>
@@ -850,7 +876,6 @@ function doPost(e) {
       document.getElementById('overhead-search').addEventListener('input', () => { overheadCurrentPage=1; updateOverheadTable(); });
       document.getElementById('debtor-search').addEventListener('input', () => { debtorCurrentPage=1; updateDebtorTable(); });
       
-      // ADDED: Warranty Status filter instantly reloads table without needing page refresh
       document.getElementById('warranty-status-filter').addEventListener('change', () => { warrantyCurrentPage=1; updateWarrantyTable(); });
 
       ['sales','warranty','debtor','stock','overhead','commission'].forEach(p => {
@@ -987,51 +1012,69 @@ function doPost(e) {
       let fs = stockRecords.filter(st => matchesSmartDateFilter(st.date, ms, ys) && (!sq || String(st.item||'').toLowerCase().includes(sq) || String(st.supplier||'').toLowerCase().includes(sq) || String(st.reason||'').toLowerCase().includes(sq)));
       
       let val=0, inQ=0, outQ=0; const iR=[], oR=[];
-      const balances = {}; // Live tracker
+      const balances = {}; 
 
       fs.forEach(st => { 
         const oIdx=stockRecords.indexOf(st), q=parseInt(st.qty)||0, c=parseFloat(st.total)||0; 
         
-        // Calculate grouping for live balance table
         const rawName = String(st.item||'Unknown').trim();
         const upperName = rawName.toUpperCase();
-        if (!balances[upperName]) balances[upperName] = { name: rawName, in: 0, out: 0 };
+        if (!balances[upperName]) balances[upperName] = { name: rawName, in: 0, out: 0, totalInCost: 0 };
 
         if(st.type==='IN'){ 
           iR.push({...st,oIdx}); inQ+=q; val+=c; 
           balances[upperName].in += q;
+          balances[upperName].totalInCost += c;
         } else { 
           oR.push({...st,oIdx}); outQ+=q; 
           balances[upperName].out += q;
         } 
       });
 
-      // Update Top HUDs
       document.getElementById('hud-stock-cost').innerText=`RM ${val.toFixed(2)}`; 
       document.getElementById('hud-stock-in').innerText=`${inQ}`; 
       document.getElementById('hud-stock-out').innerText=`${outQ}`;
       document.getElementById('hud-stock-remain').innerText=`${inQ - outQ}`;
 
-      // Render the Live Balance Table
       if (balTb) {
         const balArray = Object.values(balances).sort((a, b) => a.name.localeCompare(b.name));
         if(balArray.length === 0) {
-           balTb.innerHTML = `<tr><td colspan="4" class="px-4 py-6 text-center text-slate-500">No inventory matches your filter.</td></tr>`;
+           balTb.innerHTML = `<tr><td colspan="5" class="px-4 py-6 text-center text-slate-500">No inventory matches your filter.</td></tr>`;
         } else {
            balArray.forEach(b => {
              const remain = b.in - b.out;
+             const avgUnitCost = b.in > 0 ? (b.totalInCost / b.in) : 0;
              let colorClass = remain > 0 ? 'text-emerald-400' : (remain === 0 ? 'text-slate-500' : 'text-rose-400');
-             balTb.innerHTML += `<tr class="border-b border-slate-800/50 hover:bg-slate-800/60 transition"><td class="px-4 py-2 font-semibold text-xs">${b.name}</td><td class="px-4 py-2 text-center text-slate-400 text-xs">${b.in}</td><td class="px-4 py-2 text-center text-slate-400 text-xs">${b.out}</td><td class="px-4 py-2 text-center font-black text-sm ${colorClass}">${remain}</td></tr>`;
+             
+             balTb.innerHTML += `<tr class="border-b border-slate-800/50 hover:bg-slate-800/60 transition">
+               <td class="px-4 py-2 font-semibold text-xs">${b.name}</td>
+               <td class="px-4 py-2 text-center text-slate-400 text-xs">${b.in}</td>
+               <td class="px-4 py-2 text-center text-slate-400 text-xs">${b.out}</td>
+               <td class="px-4 py-2 text-center text-slate-400 font-mono text-xs">RM ${avgUnitCost.toFixed(2)}</td>
+               <td class="px-4 py-2 text-center font-black text-sm ${colorClass}">${remain}</td>
+             </tr>`;
            });
         }
       }
 
-      // Render Paged IN/OUT Ledger Tables
       const rnd=(arr, tb, curPg, pre, nxt, inf, cStr, sym) => {
         const tp=Math.ceil(arr.length/itemsPerPage)||1; if(window[curPg]>tp) window[curPg]=tp; if(window[curPg]<1) window[curPg]=1; const st=(window[curPg]-1)*itemsPerPage; const p=arr.slice(st, st+itemsPerPage);
         document.getElementById(inf).innerText=`Showing ${arr.length>0?st+1:0} to ${Math.min(st+itemsPerPage, arr.length)} of ${arr.length}`; document.getElementById(pre).disabled=window[curPg]===1; document.getElementById(nxt).disabled=window[curPg]===tp;
-        if(p.length===0){ tb.innerHTML=`<tr><td colspan="5" class="px-4 py-8 text-center text-slate-500">No records.</td></tr>`; return; }
-        p.forEach(i => { tb.innerHTML+=`<tr class="border-b border-slate-800/50"><td class="px-4 py-3 text-xs">${formatDateUI(i.date)}</td><td class="px-4 py-3 font-semibold">${i.item||'-'}<br><span class="text-[10px] text-slate-400">${i.reason||''}</span></td><td class="px-4 py-3 text-center font-bold ${cStr}">${sym}${i.qty||0}</td><td class="px-4 py-3 text-right font-mono">${(i.total||0).toFixed(2)}</td><td class="px-4 py-3 text-center"><button onclick="editStockRecord(${i.oIdx})" class="text-blue-400 mr-2">Edit</button><button onclick="openDeleteModal('stock', ${i.oIdx})" class="text-red-500">Del</button></td></tr>`; });
+        if(p.length===0){ tb.innerHTML=`<tr><td colspan="6" class="px-4 py-8 text-center text-slate-500">No records.</td></tr>`; return; }
+        
+        p.forEach(i => { 
+          const unitCost = parseFloat(i.cost) || (i.qty > 0 ? (parseFloat(i.total) / parseInt(i.qty)) : 0);
+          const totalCost = parseFloat(i.total) || 0;
+          
+          tb.innerHTML+=`<tr class="border-b border-slate-800/50">
+            <td class="px-4 py-3 text-xs">${formatDateUI(i.date)}</td>
+            <td class="px-4 py-3 font-semibold">${i.item||'-'}<br><span class="text-[10px] text-slate-400">${i.reason||''}</span></td>
+            <td class="px-4 py-3 text-center font-bold ${cStr}">${sym}${i.qty||0}</td>
+            <td class="px-4 py-3 text-right font-mono text-slate-300 text-xs">RM ${unitCost.toFixed(2)}</td>
+            <td class="px-4 py-3 text-right font-mono font-bold text-white">RM ${totalCost.toFixed(2)}</td>
+            <td class="px-4 py-3 text-center"><button onclick="editStockRecord(${i.oIdx})" class="text-blue-400 mr-2 text-xs">Edit</button><button onclick="openDeleteModal('stock', ${i.oIdx})" class="text-red-500 text-xs">Del</button></td>
+          </tr>`; 
+        });
       };
       rnd(iR, itb, 'stockInCurrentPage', 'stock-in-prev-btn', 'stock-in-next-btn', 'stock-in-records-info', 'text-emerald-400', '+');
       rnd(oR, otb, 'stockOutCurrentPage', 'stock-out-prev-btn', 'stock-out-next-btn', 'stock-out-records-info', 'text-rose-400', '-');
@@ -1058,15 +1101,11 @@ function doPost(e) {
       const tb=document.getElementById('commission-table-body'); tb.innerHTML='';
       const ms=document.getElementById('commission-month-smart-filter').value, ys=document.getElementById('commission-year-smart-filter').value;
       
-      // 1. Filter sales/commissions by the selected month & year
       const fs = sales.filter(s => matchesSmartDateFilter(s.date, ms, ys));
-      
-      // 2. Filter payouts by the exact same selected month & year
       const fp = payouts.filter(p => matchesSmartDateFilter(p.date, ms, ys));
       
       const map = {};
       
-      // Add up commissions earned in this specific month
       fs.forEach(s => { 
         const p=String(s.PIC||'').trim()||'Unassigned'; 
         if(!map[p]) map[p]={c:0,cm:0,pd:0}; 
@@ -1074,13 +1113,11 @@ function doPost(e) {
         map[p].cm+=parseFloat(s.commission)||0; 
       });
       
-      // Add up payouts given in this specific month
       fp.forEach(p => { 
         const t=String(p.tech||'').trim(); 
         if(map[t]) {
           map[t].pd+=parseFloat(p.amount)||0; 
         } else if(t) {
-          // If they didn't earn commission this month but got paid, track them here
           map[t]={c:0,cm:0,pd:parseFloat(p.amount)||0}; 
         }
       });
@@ -1102,8 +1139,14 @@ function doPost(e) {
 
     function updatePayoutsHistoryTable() {
         const tb=document.getElementById('payout-history-table-body'); if(!tb) return; tb.innerHTML='';
-        if(payouts.length===0){ tb.innerHTML=`<tr><td colspan="4" class="px-4 py-8 text-center text-slate-500">No payouts logged.</td></tr>`; return; }
-        payouts.forEach((p, idx) => { tb.innerHTML+=`<tr class="border-b border-slate-800/50"><td class="px-4 py-3 text-xs">${formatDateUI(p.date)}</td><td class="px-4 py-3 font-bold">${p.tech}</td><td class="px-4 py-3 text-right font-mono text-emerald-400">RM ${(parseFloat(p.amount)||0).toFixed(2)}</td><td class="px-4 py-3 text-center"><button onclick="openDeleteModal('payout', ${idx})" class="text-red-500">Del</button></td></tr>`; });
+        const ms=document.getElementById('commission-month-smart-filter').value, ys=document.getElementById('commission-year-smart-filter').value;
+        const fp = payouts.filter(p => matchesSmartDateFilter(p.date, ms, ys));
+        
+        if(fp.length===0){ tb.innerHTML=`<tr><td colspan="4" class="px-4 py-8 text-center text-slate-500">No payouts logged for this period.</td></tr>`; return; }
+        fp.forEach(p => { 
+            const idx = payouts.indexOf(p);
+            tb.innerHTML+=`<tr class="border-b border-slate-800/50"><td class="px-4 py-3 text-xs">${formatDateUI(p.date)}</td><td class="px-4 py-3 font-bold">${p.tech}</td><td class="px-4 py-3 text-right font-mono text-emerald-400">RM ${(parseFloat(p.amount)||0).toFixed(2)}</td><td class="px-4 py-3 text-center"><button onclick="openDeleteModal('payout', ${idx})" class="text-red-500">Del</button></td></tr>`; 
+        });
     }
 
     function toggleWarrantyStatus(index) { if (warrantyClaims[index]) { warrantyClaims[index].status = warrantyClaims[index].status==='completed'?'pending':'completed'; updateAllUI(); showToast("Status updated."); autoSyncPush(); } }
@@ -1136,7 +1179,6 @@ function doPost(e) {
         let url = urlInput.value.trim();
         if (!url) { alert("Please enter your Web App URL."); return; }
         
-        // URL validation logic updated to prevent docs.google.com breakages
         if (!url.includes("script.google.com")) {
             alert("❌ INVALID URL\n\nPlease enter a Google Apps Script Web App URL, not a Google Sheets URL.");
             return;
@@ -1199,7 +1241,6 @@ function doPost(e) {
       const btn = document.getElementById('manual-push-btn'); const orig = btn.innerText; btn.innerText = `Uploading...`; btn.disabled = true;
       const cvt = (arr) => arr.map(r => { let n={...r}; ['date','repairDate','followupDate'].forEach(f=>{if(n[f]&&String(n[f]).includes('-')){const p=String(n[f]).split('-');if(p.length===3)n[f]=`${p[2]}/${p[1]}/${p[0]}`;} }); return n; });
       
-      // FIXED FETCH LOGIC: Added headers to prevent CORS preflight block
       fetch(sheetEndpoint, { 
           method: 'POST', 
           redirect: 'follow', 
